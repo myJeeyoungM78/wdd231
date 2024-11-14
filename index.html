@@ -4,9 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231</title>
+    <title>WDD 231 - Web Frontend Development 1 - Jeeyoung Madsen</title>
+    <meta name="author" content="Jeeyoung Madsen" />
+
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="scripts/index.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Lora:ital,wght@0,400..700;1,400..700&family=Platypi:ital,wght@0,300..800;1,300..800&family=Satisfy&display=swap" rel="stylesheet"> -->
 </head>
 <body>
-    <h1>WDD 231 - Jeeyoung</h1>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="images/jeeyoung.jpg" alt="Jeeyoung Madsen's Profile Picture" width="60" height="90">
+                    <h1>Jeeyoung Madsen</h1>
+                </div>
+                
+                <nav>
+                    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </button>
+                    <ul class="nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Chamber</a></li>
+                        <li><a href="https://github.com/myJeeyoungM78">GitHub Profile</a></li>
+                        <li><a href="https://www.linkedin.com/in/jeeyoung-madsen-9294201b5/">LinkedIn</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+        <main>
+            <div class="container-2">
+                <div class="container-3">
+                    <section class="coursework">
+                        <h2>Course Work</h2>
+                        <ul id="courseList">
+                            <!-- Dynamically populated with JavaScript -->
+                        </ul>
+                    </section>
+                
+                    <section class="location">
+                        <h2>Orem, UT</h2>
+                        <div class="image-container">
+                            <img src="images/orem-ut-temple.jpg" alt="photo of orem temple" width="300" height="200">
+                            
+                        </div>
+                        <p>Orem UT Temple</p>
+                    </section>
+                </div>
+               
+                <div>
+                    <section class="certificate">
+                        <h2>Web and Computer Programming Certificate</h2>
+                     
+                        <div class="filter-buttons">
+                            <button id="allCourses">All</button>
+                            <button id="cseCourses">CSE</button>
+                            <button id="wddCourses">WDD</button>
+                        </div>
+                     
+                        <div id="courseCards" class="course-cards"></div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    
+        <footer>
+            <div class="footer-content">
+                <p> &copy; <span id="currentyear"></span> 🌸 Jeeyoung Madsen 🌸 UT. </p>
+                <p id="lastModified"></p>
+            </div>
+            <div class="flag-container"><img src="images/th.jpg" alt="korea flag" width="45" height="30"></div>
+        </footer>
+    </body>
+    </html>
 </body>
 </html>
