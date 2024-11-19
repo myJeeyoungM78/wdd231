@@ -1,0 +1,80 @@
+{
+    "members": [
+    {
+        "businessName" : "Air Con Costs",
+        "industry" : "Air Conditioner",
+        "logo" : "../chamber/images/leadersforcleanair.jpeg",
+        "address": "dddddddd",
+        "email" : "support@airconcosts.com",
+        "phone" : "801-123-4567",
+        "website" : "https://airconcosts.com",
+        "membership level (1=member, 2=silver, 3=gold)" : 1
+    },
+
+    {
+        "businessName" : "Air Con Costs",
+        "industry" : "Air Conditioner",
+        "logo" : "src=scripts/leadersforcleanair.jpeg",
+        "address": "dddddddd",
+        "email" : "support@airconcosts.com",
+        "phone" : "801-123-4567",
+        "website" : "https://airconcosts.com",
+        "membership level (1=member, 2=silver, 3=gold)" : 1
+        },
+    
+    {
+        "businessName" : "Air Con Costs",
+        "industry" : "Air Conditioner",
+        "logo" : "src=scripts/leadersforcleanair.jpeg",
+        "address": "dddddddd",
+        "email" : "support@airconcosts.com",
+        "phone" : "801-123-4567",
+        "website" : "https://airconcosts.com",
+        "membership level (1=member, 2=silver, 3=gold)" : 1
+        },
+
+    {
+        "businessName" : "Air Con Costs",
+        "industry" : "Air Conditioner",
+        "logo" : "src=scripts/leadersforcleanair.jpeg",
+        "address": "dddddddd",
+        "email" : "support@airconcosts.com",
+        "phone" : "801-123-4567",
+        "website" : "https://airconcosts.com",
+        "membership level (1=member, 2=silver, 3=gold)" : 1
+        },
+
+    {
+        "businessName" : "Air Con Costs",
+        "industry" : "Air Conditioner",
+        "logo" : "src=scripts/leadersforcleanair.jpeg",
+        "address": "dddddddd",
+        "email" : "support@airconcosts.com",
+        "phone" : "801-123-4567",
+        "website" : "https://airconcosts.com",
+        "membership level (1=member, 2=silver, 3=gold)" : 1
+        },
+
+    {
+        "businessName" : "Air Con Costs",
+        "industry" : "Air Conditioner",
+        "logo" : "src=scripts/leadersforcleanair.jpeg",
+        "address": "dddddddd",
+        "email" : "support@airconcosts.com",
+        "phone" : "801-123-4567",
+        "website" : "https://airconcosts.com",
+        "membership level (1=member, 2=silver, 3=gold)" : 1
+        },
+
+    {
+        "businessName" : "Air Con Costs",
+        "industry" : "Air Conditioner",
+        "logo" : "src=scripts/leadersforcleanair.jpeg",
+        "address": "dddddddd",
+        "email" : "support@airconcosts.com",
+        "phone" : "801-123-4567",
+        "website" : "https://airconcosts.com",
+        "membership level (1=member, 2=silver, 3=gold)" : 1
+        }
+    ] 
+}
