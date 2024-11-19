@@ -52,10 +52,10 @@ discover.addEventListener("click", () => {
 
 
 // Main code
-const cards = document.getElementById('cards');
-const gridCards = document.getElementById('grid');
-const listCards = document.getElementById('list');
-const url = "../chamber/data/members.json"
+// const cards = document.getElementById('cards');
+// const gridCards = document.getElementById('grid');
+// const listCards = document.getElementById('list');
+// const url = "../chamber/data/members.json"
 
 async function getMemberData() {
     const members = await fetch(url);
@@ -75,6 +75,7 @@ const displayMembers = (members) => {
         let card2 = document.createElement('section');
         let card3 = document.createElement('section');
         let card4 = document.createElement('section');
+        
 
         let businessName = document.createElement('h3');
         let industry = document.createElement('p');
@@ -119,18 +120,38 @@ const displayMembers = (members) => {
         cards.appendChild(card);
     });
 }
-cards.classList.add('grid');
-listCards.addEventListener('click', () => {
-    // alert('hello');
-    cards.classList.add('list')
-    cards.classList.remove('grid');
-})
 
-gridCards.addEventListener('click', () => {
-    // alert('hello');
-    cards.classList.add('grid')
-    cards.classList.remove('list');
-})
+// cards.classList.add('grid');
+// listCards.addEventListener('click', () => {
+//     // alert('hello');
+//     cards.classList.add('list')
+//     cards.classList.remove('grid');
+// })
+
+// gridCards.addEventListener('click', () => {
+//     // alert('hello');
+//     cards.classList.add('grid')
+//     cards.classList.remove('list');
+// })
+
+const gridbutton = document.querySelector("#grid");
+const listbutton = document.querySelector("#list");
+const display = document.querySelector("#buttons");
+
+// The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
+
+gridbutton.addEventListener("click", () => {
+	// example using arrow function
+	display.classList.add("grid");
+	display.classList.remove("list");
+});
+
+listbutton.addEventListener("click", showList); // example using defined function
+
+function showList() {
+	display.classList.add("list");
+	display.classList.remove("grid");
+}
 
 
 // Footer code
