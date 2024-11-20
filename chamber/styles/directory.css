@@ -1,12 +1,14 @@
 /* Mobile view */
+/* @import
+url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap") */
 
 :root {
     --paragraph-color: #22211f;
-    --body-font: 'Roboto Slab', sans-serif;
+    --body-font: 'Noto Sans', serif;
 
-    --nav-background-color: rgb(51, 51, 51);
+    --nav-background-color: #22333b;
     --nav-hover-link-color: #32021F;
-    --main-background-color: #CEBACF;
+    --main-background-color: #c6ac8f;
     --main-background-color2: #F4EBBE;
     --nav-hover-background-color: #F4EBBE;
 }
@@ -80,9 +82,9 @@ nav.show::before {
     font-size: 30px;
 }
 
-.active::before {
+/* .active::before {
     content: "🔖";
-}
+} */
 
 nav ul li:hover {
     transform: scale(1.1);
@@ -130,7 +132,7 @@ main {
 
 }
 
-main h3 {
+section h3 {
     text-align: left;
     background-color: var(--nav-background-color);
     color: white;
@@ -139,11 +141,11 @@ main h3 {
 
 .body {
     text-align: left;
-    background-color: #CEBACF;
+    background-color: #c6ac8f;
     margin-top: -19px;
 }
 
-main ul li {
+#keynotes ul li {
     list-style: none;
     text-align: left;
 }
@@ -193,22 +195,27 @@ button:hover {
     color: var(--main-background-color);
 }
 
+/* #weather-1 {
+    columns: 1fr, 1fr;
+} */
+
 #weather-1 ul {
-    margin-left: -40px;
+
+    margin-left: 60px;
 }
 
-#weather-image {
-    display: flex;
+/* #weather-image {
+    display: left;
 
-}
+} */
 
-#weather-2 div {
+/* #weather-2 div {
     padding-bottom: 25px;
-}
+} */
 
 #weather-2 p {
-    padding-top: 20px;
-    padding-left: 40px;
+    /* padding-top: 20px;
+    padding-left: 40px; */
     font-size: 1.7em;
 }
 
@@ -216,12 +223,12 @@ button:hover {
     margin: 20px;
 }
 
-.card-container {
+/* .card-container {
     border-radius: 10px;
     background-color: var(--main-background-color);
     align-items: center;
-}
-
+} */
+/* 
 .card-1 {
     border-bottom: 1px solid gray;
 }
@@ -235,14 +242,105 @@ button:hover {
     font-size: 0.9rem;
     padding: 10px;
     border-top: 1px solid grey;
+} */
+
+.grid article {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 1rem;
+	background-color: #eee;
+}
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 5px;
+	align-items: center;
 }
 
-#cards h3 {
+.grid article {
+	text-align: center;
+}
+
+.grid img {
+	border: 1px solid #fff;
+	box-shadow: 0 0 10px #333;
+    height: 100px;
+    max-width: 100px;
+}
+
+.grid ul li {
+    text-align: left;
+}
+
+.grid article > * {
+	margin: 1rem;
+}
+
+.grid h3 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+}
+
+.list article {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	margin: 0;
+	padding: 0.25rem;
+}
+
+.list article > * {
+	margin: 0rem;
+}
+
+.list article img {
+	display: none; /* smaller viewports only */
+}
+
+.list article h3 {
+	font-size: 1.2rem;
+    text-align: left;
+    color:#22333b;
+    padding: 10px;
+}
+
+.list article:nth-child(even) {
+	background-color: #bed;
+}
+
+.list article li {
+    text-align: right;
+}
+
+.list article p {
+    text-align: left;
+}
+
+
+article p {
+	font-weight: 700;
+	font-size: 1rem;
+}
+
+/* article ul {
+	font-size: 1rem;
+} */
+
+/* Images are jerks - Seattle*/
+/* article img {
+	height: 100%;
+	max-width: 100%; 
+} */
+
+/* #cards h3 {
     color: var(--paragraph-color);
     background-color: var(--main-background-color);
     text-align: center;
     margin-bottom: -25px;
-}
+} */
 
 footer {
     background-color: var(--nav-background-color);

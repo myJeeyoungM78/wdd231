@@ -80,6 +80,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 // const cards = document.getElementById('card');
 // const gridCards = document.getElementById('article');
 // const listCards = document.getElementById('list');
+const cards = document.querySelector('#cards')
 const url = "data/members.json";
 
 async function getMemberData() {
@@ -98,8 +99,8 @@ async function getMemberData() {
     // const members = await fetch(url, {
     //     body: JSON.stringify({}),
     // });
-    const members = await fetch(url);
-    const data = await members.json();
+    const response = await fetch(url);
+    const data = await response.json();
 
     // console.table(data.members);
     displayMembers(data.members);
@@ -114,7 +115,7 @@ getMemberData();
 
 const displayMembers = (members) => {
     members.forEach((member) => {
-        let card = document.createElement('section');        
+        let card = document.createElement('article');        
 
         let businessName = document.createElement('h3');
         let industry = document.createElement('p');
@@ -134,8 +135,8 @@ const displayMembers = (members) => {
         logo.setAttribute('src', member.logo);
         logo.setAttribute('alt', `logo of ${member.businessName}`);
         logo.setAttribute('loading', 'lazy');
-        logo.setAttribute('width', '100');
-        logo.setAttribute('height', '100');
+        logo.setAttribute('width', '340');
+        logo.setAttribute('height', '440');
 
         card.appendChild(businessName);
         card.appendChild(industry)
@@ -145,7 +146,7 @@ const displayMembers = (members) => {
         address.appendChild(website);
         card.appendChild(address);
 
-        // gridCards.appendChild(card);
+        cards.appendChild(card);
 
     });
 }
@@ -174,7 +175,7 @@ const displayMembers = (members) => {
 
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
-const display = document.querySelector("article");
+const display = document.querySelector("#cards");
 
 // The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
 
