@@ -1,81 +1,120 @@
 // header code
 
 // Burger code
-const ham = document.querySelector('nav');
-const list = document.getElementById('navigation');
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
-ham.addEventListener('click', () => {
-    list.classList.toggle('show');
-    ham.classList.toggle('show');
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+    // Update aria-expanded attribute
+    const isExpanded = hamburger.classList.contains('active');
+    hamburger.setAttribute('aria-expanded', isExpanded);
+    
+    // Optionally prevent scrolling when menu is open
+    document.body.style.overflow = isExpanded ? 'hidden' : '';
 })
 
+// Close menu when a link is clicked
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    });
+});
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (event) => {
+    if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
 
 // header way finding code
-const home = document.getElementById('home');
-const directory = document.getElementById('directory');
-const join = document.getElementById('join');
-const discover = document.getElementById('discover');
-const mainHeader = document.getElementById('main-header');
+// const home = document.getElementById('Home');
+// const directory = document.getElementById('directory');
+// const join = document.getElementById('join');
+// const discover = document.getElementById('discover');
+// const mainHeader = document.getElementById('main-header');
 
-home.classList.add('active');
-home.addEventListener("click", () => {
-    home.classList.add('active');
-    directory.classList.remove('active');
-    join.classList.remove('active');
-    discover.classList.remove('active');
-    mainHeader.textContent = 'Home';
-})
 
-directory.addEventListener("click", () => {
-    directory.classList.add('active');
-    home.classList.remove('active');
-    join.classList.remove('active');
-    discover.classList.remove('active');
-    mainHeader.textContent = 'Directory';
-})
+// home.addEventListener("click", () => {
+//     home.classList.add('active');
+//     directory.classList.remove('active');
+//     join.classList.remove('active');
+//     discover.classList.remove('active');
+//     mainHeader.textContent = 'Home';
+// })
 
-join.addEventListener("click", () => {
-    join.classList.add('active');
-    home.classList.remove('active');
-    directory.classList.remove('active');
-    discover.classList.remove('active');
-    mainHeader.textContent = 'Join';
-})
+// directory.addEventListener("click", () => {
+//     directory.classList.add('active');
+//     home.classList.remove('active');
+//     join.classList.remove('active');
+//     discover.classList.remove('active');
+//     mainHeader.textContent = 'Directory';
+// })
 
-discover.addEventListener("click", () => {
-    discover.classList.add('active');
-    home.classList.remove('active');
-    directory.classList.remove('active');
-    join.classList.remove('active');
-    mainHeader.textContent = 'Discover';
-})
+// join.addEventListener("click", () => {
+//     join.classList.add('active');
+//     home.classList.remove('active');
+//     directory.classList.remove('active');
+//     discover.classList.remove('active');
+//     mainHeader.textContent = 'Join';
+// })
+
+// discover.addEventListener("click", () => {
+//     discover.classList.add('active');
+//     home.classList.remove('active');
+//     directory.classList.remove('active');
+//     join.classList.remove('active');
+//     mainHeader.textContent = 'Discover';
+// })
 
 
 // Main code
-// const cards = document.getElementById('cards');
-// const gridCards = document.getElementById('grid');
+// const cards = document.getElementById('card');
+// const gridCards = document.getElementById('article');
 // const listCards = document.getElementById('list');
-// const url = "../chamber/data/members.json"
+const url = "data/members.json";
 
 async function getMemberData() {
+
+    // try {
+    //     const response = await fetch(url);
+    //     if (!response.ok) {
+    //       throw new Error(`Response status: ${response.status}`);
+    //     }
+    
+    //     const json = await response.json();
+    //     console.log(json);
+    //   } catch (error) {
+    //     console.error(error.message);
+    //   }
+    // const members = await fetch(url, {
+    //     body: JSON.stringify({}),
+    // });
     const members = await fetch(url);
     const data = await members.json();
-    console.log(data);
-    displayMembers(data);
+
+    // console.table(data.members);
+    displayMembers(data.members);
+    // displayListMembers(data.members);
 }
 
 getMemberData();
 
 // Display memebers
 
+// document.body.onload = addElement;
+
 const displayMembers = (members) => {
     members.forEach((member) => {
-        let card = document.createElement('section');
-        let card1 = document.createElement('section');
-        let card2 = document.createElement('section');
-        let card3 = document.createElement('section');
-        let card4 = document.createElement('section');
-        
+        let card = document.createElement('section');        
 
         let businessName = document.createElement('h3');
         let industry = document.createElement('p');
@@ -86,57 +125,56 @@ const displayMembers = (members) => {
         let website = document.createElement('li');
 
 
-        businessName.textContent = `${member.name}`;
+        businessName.textContent = `${member.businessName}`;
         industry.textContent = `${member.industry}`
-        email.innerHTML = `<strong>email</strong>: ${member.email}`;
-        phone.innerHTML = `<strong>Phone</strong>: ${member.phone_number}`;
-        website.innerHTML = `<strong>Url</strong>: ${member.website_url}`;
-        logo.setAttribute('src', member.image_file);
-        logo.setAttribute('alt', `logo of ${member.name}`);
+        address.textContent = ``
+        email.innerHTML = `<strong>Email</strong>: ${member.email}`;
+        phone.innerHTML = `<strong>Phone</strong>: ${member.phone}`;
+        website.innerHTML = `<strong>Url</strong>: ${member.website}`;
+        logo.setAttribute('src', member.logo);
+        logo.setAttribute('alt', `logo of ${member.businessName}`);
         logo.setAttribute('loading', 'lazy');
         logo.setAttribute('width', '100');
         logo.setAttribute('height', '100');
 
-        card.classList.add('card-container');
-        card1.classList.add('card-1');
-        card2.classList.add('card-2');
-        card3.classList.add('card-3');
-        card4.classList.add('card-4');
-
-
-        card1.appendChild(businessName);
-        card1.appendChild(industry)
-        card2.appendChild(logo);
+        card.appendChild(businessName);
+        card.appendChild(industry)
+        card.appendChild(logo);
         address.appendChild(email);
         address.appendChild(phone);
         address.appendChild(website);
-        card3.appendChild(address);
+        card.appendChild(address);
 
-        card4.appendChild(card2);
-        card4.appendChild(card3);
+        // gridCards.appendChild(card);
 
-        card.appendChild(card1);
-        card.appendChild(card4);
-        cards.appendChild(card);
     });
 }
 
-// cards.classList.add('grid');
-// listCards.addEventListener('click', () => {
-//     // alert('hello');
-//     cards.classList.add('list')
-//     cards.classList.remove('grid');
-// })
+// const membertable = document.createElement('table');
 
-// gridCards.addEventListener('click', () => {
-//     // alert('hello');
-//     cards.classList.add('grid')
-//     cards.classList.remove('list');
-// })
+// const displayListMembers = (members) => {
+//     members.forEach((member) => {
+//         let card = document.createElement('section');
+            
+//         let row = membertable.insertRow(0);
+
+//         let cell1 = row.insertCell(0);
+//         cell1.innerHTML= `${member.businessName}`;
+//         cell1.setAttribute('colspan', 2);
+//         let cell2 = row.insertCell(1);
+//         cell2.innerHTML = `${member.industry}`;
+    
+//         card.appendChild(membertable);
+
+//         gridCards.appendChild(card);
+
+//     });
+// }
+
 
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
-const display = document.querySelector("#buttons");
+const display = document.querySelector("article");
 
 // The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
 
@@ -155,11 +193,9 @@ function showList() {
 
 
 // Footer code
-let currentDate = new Date();
-let lastModified = new Date(document.lastModified);
 
-let year = document.getElementById("currentyear");
-year.textContent = `©${currentDate.getFullYear()}`;
+document.getElementById('currentyear').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = `Last modified: ${document.lastModified}`;
 
-let date = document.getElementById("lastModified");
-date.textContent = `Last Modification : ${lastModified.getMonth() + 1}/${lastModified.getDate()}/${lastModified.getFullYear()} ${lastModified.getHours()}:${lastModified.getMinutes()}:${lastModified.getSeconds()}`
+// Initial load of all courses
+//displayCourses();

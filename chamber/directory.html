@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,17 @@
     <title>WDD 231 - Web Frontend Development 1 - Jeeyoung Madsen</title>
     <meta name="author" content="Jeeyoung Madsen">
 
-    <!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"> -->
+    <meta property="og:title" content="OREMUT Chamber Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://myJeeyoungM78.github.io/wdd231/chamber/images/default.svg">
+    <meta property="og:url" content="https://natnael31.github.io/wdd231/chamber/directory.html">
+    <meta property="og:image:alt" content="Chamber Directories and Contacts">
+
+    <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/directory.css">
-    <script src="scripts/directory.js" defer=""></script>
+    <script src="scripts/directory.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +29,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="images/#" alt="logo" width="60" height="90">
+                <img src="images/default.svg" alt="logo" width="60" height="90">
                 <h1>OREMUT <small>Chamber of commerce</small></h1>
             </div>
 
@@ -99,21 +107,41 @@
             </div>
         </section>
         <hr>
-        <div class="buttons">
+        <div id="buttons">
             <button id="grid">Grid</button>
             <button id="list">List</button>
         </div>
 
+        <!-- <article id ="article" class="grid"></article> -->
         <article class="grid"></article>
-
     </main>
 
     <footer>
-        <div class="footer-content">
-            <p> &copy; <span id="currentyear"></span> 🌸 Jeeyoung Madsen 🌸 UT. </p>
+        <div id="contact">
+            <p><strong> OREMUT Chamber of Commerce</strong></p>
+            <p>1234N 2223E Orem, UT</p>
+            <p><a href="https://info.oremut.org/">info@oremut.org</a></p>
+            <p>(801) 123-4567</p>
+        </div>
+
+        <div id="social_media">
+            <a href="https://youtube.com" target="_blank">
+                <img src="./images/youtube.jpg" width="40" alt="Youtube" loading="lazy">
+            </a>
+            <a href="https://twitter.com" target="blank">
+                <img src="./images/twitter.jpg" width="40" alt="Twitter" loading="lazy">
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <img src="./images/indeed.jpg" width="40" alt="Linkedin" loading="lazy">
+            </a>
+        </div>
+
+        <div id="info">
+            <p>WDD231 Class Project</p>
+            <p>Jeeyoung Madsen</p>
+            <p><span id="currentyear"></span> OREMUT Chamber of Commerce</p>
             <p id="lastModified"></p>
         </div>
-        <div class="flag-container"><img src="images/th.jpg" alt="korea flag" width="45" height="30"></div>
     </footer>
 
 </body>
