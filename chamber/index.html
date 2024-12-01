@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 - Web Frontend Development I - Chamber of commerce.">
+    <title>WDD 231 - Web Frontend Development 1 - Jeeyoung Madsen</title>
+    <meta name="author" content="Jeeyoung Madsen">
+
+    <link rel="icon" href="images/default-monochrome-white.svg" type="images/svg">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="scripts/index.js" defer></script>
+    <!-- <script src="scripts/directory.js" defer></script> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/default-monochrome-white.svg" alt="logo" width="60" height="90">
+                <h1>OREMUT <small>Chamber of Commerce</small></h1>
+            </div>
+
+            <nav>
+                <ul id="navigation">
+                    <li><a id="home" href="index.html">Home</a></li>
+                    <li><a id="directory" href="directory.html">Directory</a></li>               
+                    <li><a id="discover" href="#">Discover</a></li>
+                    <li><a id="join" href="#">Join</a></li>
+                    <!-- <li><a href="https://github.com/myJeeyoungM78">GitHub Profile</a></li>
+                    <li><a href="https://www.linkedin.com/in/jeeyoung-madsen-9294201b5/">LinkedIn</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <div id="hero" class="ct-inner-content">
+            <section id="section-inner" class="ct-section c-hero-16">
+                <img src="images/oremview.jpg" alt="orem city winter" loading="lazy">
+                <div class="ct-section-inner-wrap">
+                    <h2 class="text-overlay">WELCOME TO THE OREMUT CHAMBER OF COMMERCE</h2>
+                    <div id="keynotes">
+                        <ul>
+                            <li><strong>Lean Global Network</strong> – Lean Global connection: Trends and Innovations - Thursday 7:00am
+                            </li>
+                            <li><strong>UVU Open House</strong> – UVU Prospective Student Services: Utah Valley University-SC Grand Ballroom - Thursday 5:00pm 
+                            </li>
+                            <li><strong>1 Million Cups - Entrepreneur Networking</strong> – UVU Bsiness Resource Center - wednesday 9:00am</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="main-header">Home</div>
+
+        <section id="events">
+            <div id="event">
+                <h3>Events</h3>
+                <div class="card">event-1 <br>event-2 <br>event-3 <br>event-4 <br>event-5 <br>event-6
+                </div>
+            </div>
+
+            <div id="weather-1">
+                <h3>Current Weather</h3>
+                <div class="card">
+                    <!-- <imag id="graphic" src="https://openweathermap.org/img/wn/10d@2x.png" alt="clear sky" class="icon"></imag> -->
+                    <imag id="graphic" src="" alt="clear sky" class="icon"></imag>
+                    <h4 id="town"></h4>
+                    <!-- <imag id="graphic" src="https://openweathermap.org/img/wn/10d@2x.png" alt="clear sky"></imag> -->
+                    <p id="description"></p>
+                    <p id="temperature"></p>
+                </div>
+            </div>         
+
+            <div id="weather-2">
+                <h3>Weather Forecast</h3>
+                <div class="card">
+                    <!-- <p>Today: <strong>20<sup>o</sup>C</strong></p>
+                    <p>Sunday: <strong>23<sup>o</sup>C</strong></p>
+                    <p>Monday: <strong>24<sup>o</sup>C</strong></p> -->
+                </div>
+            </div>
+    <!-- <script src="scripts/weather.js"></script> -->
+        </section>
+        <!-- <script src="scripts/weather.js"></script> -->
+        <hr>
+
+        <!-- <div id="buttons">
+            <button id="spotLights">Spotlights</button>
+            <button id="membershipLevel">MemberShip Level</button>
+        </div> -->
+
+        <div id="spotlightSection" class="business-grid">
+            <!-- Spotlight cards will be dynamically inserted here -->
+        </div>
+
+    </main>
+
+    <footer>
+        <div id="contact">
+            <p><strong> OREMUT Chamber of Commerce</strong></p>
+            <p>1234N 2223E Orem, UT</p>
+            <p><a href="https://info.oremut.org/">info@oremut.org</a></p>
+            <p>(801) 123-4567</p>
+        </div>
+
+        <div id="social_media">
+            <a href="https://youtube.com" target="_blank">
+                <img src="./images/youtube.jpg" width="40" alt="Youtube" loading="lazy">
+            </a>
+            <a href="https://twitter.com" target="blank">
+                <img src="./images/twitter.jpg" width="40" alt="Twitter" loading="lazy">
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <img src="./images/indeed.jpg" width="40" alt="Linkedin" loading="lazy">
+            </a>
+        </div>
+
+        <div id="info">
+            <p>WDD231 Class Project</p>
+            <p>Jeeyoung Madsen</p>
+            <p><span id="currentyear"></span> OREMUT Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+<script src="scripts/weather.js"></script>
+<script src="scripts/spotlights.js"></script>
+</body>
+</html>

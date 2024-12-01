@@ -8,62 +8,62 @@
         "email" : "support@siliconslopes.com",
         "phone" : "(801) 123-4567",
         "website" : "https://www.siliconslopes.com/",
-        "membership level (1=member, 2=silver, 3=gold)" : 1
+        "membershipLevel" : 2
     },
 
     {
         "businessName" : "Air Con Costs",
         "industry" : "Air Conditioner",
-        "logo" : "../chamber/images/aircon.jpeg",
+        "logo" : "images/aircon.jpeg",
         "address": "dddddddd",
         "email" : "support@airconcosts.com",
         "phone" : "(801) 123-4567",
         "website" : "https://airconcosts.com",
-        "membership level (1=member, 2=silver, 3=gold)" : 1
+        "membershipLevel" : 1
     },
     
     {
         "businessName" : "CLYDE Companies",
         "industry" : "Clyde Companies",
-        "logo" : "../chamber/images/clyde.jpg",
+        "logo" : "images/clyde.jpg",
         "address": "Orem, UT",
         "email" : "support@clydeinc.com",
         "phone" : "(801) 802-6932",
         "website" : "http://www.clydeinc.com",
-        "membership level (1=member, 2=silver, 3=gold)" : 1
+        "membershipLevel" : 1
     },
 
     {
         "businessName" : "CULINARY CRAFTS",
         "industry" : "culinary Crafts",
-        "logo" : "../chamber/images/Culinary.webp",
+        "logo" : "images/Culinary.webp",
         "address": "573 W State St, Suite A, Pleasant Grove, UT 84062",
         "email" : "support@airconcosts.com",
         "phone" : "(801) 225-6575",
         "website" : "www.culinarycrafts.com",
-        "membership level (1=member, 2=silver, 3=gold)" : 1
+        "membershipLevel" : 2
     },
 
     {
         "businessName" : "KeenEye FAMILY VISION",
         "industry" : "Health Care",
-        "logo" : "../chamber/images/keeneye.webp",
+        "logo" : "images/keeneye.webp",
         "address": "Provo, UT",
         "email" : "keeneyefamilyvision@gmail.com",
         "phone" : "(801) 373-0440",
         "website" : "https://www.keeneyefamilyvision.com/",
-        "membership level (1=member, 2=silver, 3=gold)" : 1
+        "membershipLevel" : 3
     },
 
     {
         "businessName" : "PilmerPR, a Benefit LLC",
         "industry" : "Public Relations",
-        "logo" : "../chamber/images/pilmerpr_logo.jpeg",
+        "logo" : "images/pilmerpr_logo.jpeg",
         "address": "184E 2000N Orem, Utah 84057",
         "email" : "john@pilmerpr.com",
         "phone" : "(801) 369-7535",
         "website" : "https://pilmerpr.com/",
-        "membership level (1=member, 2=silver, 3=gold)" : 1
+        "membershipLevel" : 2
     },
 
     {
@@ -74,6 +74,7 @@
         "email" : "info@rapidfire-it.com",
         "phone" : "(801) 796-2207",
         "website" : "https://www.rapidfire-it.com/",
-        "membership level (1=member, 2=silver, 3=gold)" : 1
-    }] 
+        "membershipLevel" : 3
+    }
+    ] 
 }
