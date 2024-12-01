@@ -1,0 +1,10 @@
+WDD231 - Web Frontend Development
+Jeeyoung Madsen
+
+Purpose:
+
+* I'm planning a hobby-sharing and a small business website. 
+The main page is designed to be an attractive advertising page with useful information about your hobby.
+It also has a child page where you can sell products related to that hobby. 
+
+* I recently bought a new machine. I'm thinking of starting a small internet business with it.
