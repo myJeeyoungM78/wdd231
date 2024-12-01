@@ -76,15 +76,12 @@ nav::before {
 }
 
 nav.show::before {
-    content: "❌";
+    content: "❎";
     color: var(--nav-link-color);
     padding-left: 50px;
     font-size: 30px;
 }
 
-/* .active::before {
-    content: "🔖";
-} */
 
 nav ul li:hover {
     transform: scale(1.1);

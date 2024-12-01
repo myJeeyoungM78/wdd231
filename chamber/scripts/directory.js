@@ -1,79 +1,53 @@
 // header code
 
 // Burger code
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+const ham = document.querySelector('nav');
+const list = document.getElementById('navigation');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('active');
-    // Update aria-expanded attribute
-    const isExpanded = hamburger.classList.contains('active');
-    hamburger.setAttribute('aria-expanded', isExpanded);
-    
-    // Optionally prevent scrolling when menu is open
-    document.body.style.overflow = isExpanded ? 'hidden' : '';
+ham.addEventListener('click', () => {
+    ham.classList.toggle('show');
+    list.classList.toggle('show');
 })
 
-// Close menu when a link is clicked
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-    });
-});
-
-  // Close menu when clicking outside
-  document.addEventListener('click', (event) => {
-    if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
-      hamburger.classList.remove('active');
-      navLinks.classList.remove('active');
-      hamburger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    }
-  });
-
 // header way finding code
-// const home = document.getElementById('Home');
-// const directory = document.getElementById('directory');
-// const join = document.getElementById('join');
-// const discover = document.getElementById('discover');
-// const mainHeader = document.getElementById('main-header');
+const home = document.getElementById('home');
+const directory = document.getElementById('directory');
+const join = document.getElementById('join');
+const discover = document.getElementById('discover');
+const mainHeader = document.getElementById('main-header');
 
 
-// home.addEventListener("click", () => {
-//     home.classList.add('active');
-//     directory.classList.remove('active');
-//     join.classList.remove('active');
-//     discover.classList.remove('active');
-//     mainHeader.textContent = 'Home';
-// })
+home.addEventListener("click", () => {
+    home.classList.add('active');
+    directory.classList.remove('active');
+    join.classList.remove('active');
+    discover.classList.remove('active');
+    mainHeader.textContent = 'Home';
+})
 
-// directory.addEventListener("click", () => {
-//     directory.classList.add('active');
-//     home.classList.remove('active');
-//     join.classList.remove('active');
-//     discover.classList.remove('active');
-//     mainHeader.textContent = 'Directory';
-// })
+directory.addEventListener("click", () => {
+    directory.classList.add('active');
+    home.classList.remove('active');
+    join.classList.remove('active');
+    discover.classList.remove('active');
+    mainHeader.textContent = 'Directory';
+})
 
-// join.addEventListener("click", () => {
-//     join.classList.add('active');
-//     home.classList.remove('active');
-//     directory.classList.remove('active');
-//     discover.classList.remove('active');
-//     mainHeader.textContent = 'Join';
-// })
+join.addEventListener("click", () => {
+    join.classList.add('active');
+    home.classList.remove('active');
+    directory.classList.remove('active');
+    discover.classList.remove('active');
+    mainHeader.textContent = 'Join';
+})
 
-// discover.addEventListener("click", () => {
-//     discover.classList.add('active');
-//     home.classList.remove('active');
-//     directory.classList.remove('active');
-//     join.classList.remove('active');
-//     mainHeader.textContent = 'Discover';
-// })
+discover.addEventListener("click", () => {
+    discover.classList.add('active');
+    home.classList.remove('active');
+    directory.classList.remove('active');
+    join.classList.remove('active');
+    mainHeader.textContent = 'Discover';
+})
 
 
 // Main code
@@ -85,20 +59,6 @@ const url = "data/members.json";
 
 async function getMemberData() {
 
-    // try {
-    //     const response = await fetch(url);
-    //     if (!response.ok) {
-    //       throw new Error(`Response status: ${response.status}`);
-    //     }
-    
-    //     const json = await response.json();
-    //     console.log(json);
-    //   } catch (error) {
-    //     console.error(error.message);
-    //   }
-    // const members = await fetch(url, {
-    //     body: JSON.stringify({}),
-    // });
     const response = await fetch(url);
     const data = await response.json();
 
@@ -127,8 +87,8 @@ const displayMembers = (members) => {
 
 
         businessName.textContent = `${member.businessName}`;
-        industry.textContent = `${member.industry}`
-        address.textContent = ``
+        industry.textContent = `${member.industry}`;
+        address.textContent = ``;
         email.innerHTML = `<strong>Email</strong>: ${member.email}`;
         phone.innerHTML = `<strong>Phone</strong>: ${member.phone}`;
         website.innerHTML = `<strong>Url</strong>: ${member.website}`;
