@@ -329,10 +329,10 @@ section p {
 .business-grid {
     grid-template-columns: 1fr;
     /* padding: auto; */
-    padding-top: 20px;
+    /* padding-top: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
-    padding-left: 50px;
+    padding-left: 50px; */
 }
 
 .business-card {
