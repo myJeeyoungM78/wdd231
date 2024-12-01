@@ -242,9 +242,9 @@ nav a:hover {
     margin-bottom: 1rem;
     /* width: 90%; */
     padding-top: 20px;
-        padding-right: 40px;
-        padding-bottom: 20px;
-        padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-left: 40px;
 }
 
 * {
@@ -328,7 +328,11 @@ section p {
 
 .business-grid {
     grid-template-columns: 1fr;
-    padding: auto;
+    /* padding: auto; */
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
 }
 
 .business-card {
@@ -349,10 +353,10 @@ section p {
     margin: 1rem 0;
     /* max-width: 1200px; */
     cursor: grab;
-    padding-top: 50px;
+    /* padding-top: 50px;
     padding-right: 50px;
     padding-bottom: 75px;
-    padding-left: 50px;
+    padding-left: 50px; */
 }
 
 .business-grid:active {
@@ -524,10 +528,10 @@ footer a img:hover {
         grid-template-columns: 1fr 2fr;
     } */
 
-    #graphic {
-        /* display: inline-block; */
+    /* #graphic {
+        display: inline-block;
         width: 100%;
-    }
+    } */
 
     /* #weather-1 {
         font-size: 0.8em;
@@ -560,18 +564,24 @@ footer a img:hover {
         padding: 0;
         /* margin: 0; */
     }
-
-    div {
+/* 
+    div #spotlightSection{
         unicode-bidi: isolate;
-    }
+            display: block;
+                unicode-bidi: isolate;
+    } */
 
     .business-grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 1rem;
-        margin: 1rem 0;
-        max-width: 1200px;
+        /* margin: 1rem 0;
+        max-width: 1200px; */
         cursor: grab;
+        padding-top: 75px;
+        padding-right: 50px;
+        padding-bottom: 75px;
+        padding-left: 50px;
     }
 
     .business-grid:active {
@@ -583,8 +593,8 @@ footer a img:hover {
         border-radius: 10px;
         border: 20x solid #32021F;
         padding: 1.5rem;
-        display: flex;
-        flex-direction: column;
+        /* display: flex; */
+        /* flex-direction: column; */
         gap: 0.5rem;
         height: 300px;
         width: 100%;
@@ -623,7 +633,7 @@ footer a img:hover {
     }
 
     .business-image {
-        width: 50px;
+        width: 100px;
         height: auto;
         background: var(--card-background);
         border: 1px solid var(--card-border);
