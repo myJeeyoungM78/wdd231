@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 - Web Frontend Development I - Chamber of commerce.">
+    <title>WDD 231 - Web Frontend Development 1 - Jeeyoung Madsen</title>
+    <meta name="author" content="Jeeyoung Madsen">
+
+    <link rel="icon" href="images/default-monochrome-white.svg" type="images/svg">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/discover.css">
+    <script src="scripts/index.js" defer></script>
+    <!-- <script src="scripts/directory.js" defer></script> -->
+    <script src="scripts/discover.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/default-monochrome-white.svg" alt="logo" width="60" height="90">
+                <h1>OREMUT <small>Chamber of Commerce</small></h1>
+            </div>
+
+            <nav>
+                <ul id="navigation">
+                    <li><a id="home" href="index.html">Home</a></li>
+                    <li><a id="directory" href="directory.html">Directory</a></li>
+                    <li><a id="discover" href="discover.html">Discover</a></li>
+                    <li><a id="join" href="join.html">Join</a></li>
+                    <!-- <li><a href="https://github.com/myJeeyoungM78">GitHub Profile</a></li>
+                    <li><a href="https://www.linkedin.com/in/jeeyoung-madsen-9294201b5/">LinkedIn</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="discover-grid">
+
+        <section id="section-blog" class="ct-section">
+            <h2>Chamber Blog</h2>
+            <div class="ct-section-inner-wrap">
+            <section class="info-box">
+                <h3>Demographics</h3>
+                <p><strong>Population: </strong>98,129 (2020)</p>
+                <p><strong>Area: </strong>18.61 Miles</p>
+                <p><strong>Housing Population Estimates: </strong>(March 2024) 95,649</p>
+            </section>
+            <section class="info-box">
+                <h3>Upcoming Events</h3>
+                <ul>
+                    <li><strong>2024 WBN Holiday Luncheon</strong> - Location: Event Center - When: Dec 1, 2024</li>
+                    <li><strong>2025 Pillar of the Valley</strong> - Location: Convention Center - When: Sep 17, 2024</li>
+                </ul>
+            </section>
+            <section class="info-box">
+                <h3>Healthcare Industries</h3>
+                <img id="image-112-2086" alt="healthcare industries" src="https://thechamber.org/wp-content/uploads/2023/11/Slide15-Mental-Health-2.png" 
+                    class="lazy-image" srcset="https://thechamber.org/wp-content/uploads/2023/11/Slide15-Mental-Health-2.png 720w, https://thechamber.org/wp-content/uploads/2023/11/Slide15-Mental-Health-2-300x169.png 300w" 
+                    width="600" height="400">
+                    <!-- sizes="(max-width: 720px) 100vw, 720px -->
+            </section>
+            <div class="calendar">
+                <div class="calendar-header">
+                    <span class="prev">&#10094;</span>
+                    <span>June 24, 2024</span>
+                    <span class="next">&#10095;</span>
+                </div>
+                <table>
+                    <tr>
+                        <th>Su</th>
+                        <th>Mo</th>
+                        <th>Tu</th>
+                        <th>We</th>
+                        <th>Th</th>
+                        <th>Fr</th>
+                        <th>Sa</th>
+                    </tr>
+                </table>
+            </div>
+
+            </div>
+        </section>
+
+        <section class="explore">
+            <h2>Local Explore</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="images/city-center-park.webp" data-src="images/Kisumu-Impala-Sanctuary.webp"
+                        alt="city-center-park" class="lazy-image" width="600" height="400">
+                    <figcaption>City Center Park</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/palisade-park.jpg" data-src="images/kit-mikayi.webp" alt="palisade-park"
+                        class="lazy-image" width="600" height="400">
+                    <figcaption>Palisade Park</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/scera-park.jpg" data-src="images/lake-victoria.webp" alt="scera-park"
+                        class="lazy-image" width="600" height="400">
+                    <figcaption>Scera Park</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/University-place-11-26.jpg" data-src="images/University-place-11-26.webp" alt="University-place-11-26"
+                        class="lazy-image" width="600" height="400">
+                    <figcaption>Light the World Giving Machines</figcaption>
+                    <p><b>Dillard's:  </b>Nov.26, 10AM</p>
+                </figure>
+                <figure>
+                    <img src="images/riverwoods-12-23.webp" data-src="images/riverwoods-12-23.webp" alt="riverwoods-12-23"
+                        class="lazy-image" width="600" height="400">
+                    <figcaption>Santa Is Here!</figcaption>
+                    <p><b>I love RiverWoods:  </b>Dec.23, 5PM</p>
+                </figure>
+                <figure>
+                    <img src="images/university-place-12-17.jpg" data-src="university-place-12-17.webp" alt="university-place-12-17"
+                        class="lazy-image" width="600" height="400">
+                    <figcaption>Christmas Carolers</figcaption>
+                    <p><b>University Place:  </b>Dec.10, 6PM</p>
+                </figure>
+            </div>
+        </section>
+
+        <section class="visitor-message"></section>
+    </main>
+
+        <!-- <section class="visitor-message"></section> -->
+
+    <footer>
+        <div id="contact">
+            <p><strong> OREMUT Chamber of Commerce</strong></p>
+            <p>1234N 2223E Orem, UT</p>
+            <p><a href="https://info.oremut.org/">info@oremut.org</a></p>
+            <p>(801) 123-4567</p>
+        </div>
+
+        <div id="social_media">
+            <a href="https://youtube.com" target="_blank">
+                <img src="./images/youtube.jpg" width="40" alt="Youtube" loading="lazy">
+            </a>
+            <a href="https://twitter.com" target="blank">
+                <img src="./images/twitter.jpg" width="40" alt="Twitter" loading="lazy">
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <img src="./images/indeed.jpg" width="40" alt="Linkedin" loading="lazy">
+            </a>
+        </div>
+
+        <div id="info">
+            <p>WDD231 Class Project</p>
+            <p>Jeeyoung Madsen</p>
+            <p><span id="currentyear"></span> OREMUT Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+    <!-- <script src="scripts/weather.js"></script>
+    <script src="scripts/spotlights.js"></script> -->
+</body>
+
+</html>
