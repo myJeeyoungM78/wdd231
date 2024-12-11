@@ -37,7 +37,7 @@ function displayResults(data) {
   // myDescription.innerHTML = '<strong>Description</strong>: ${data.weather[0].description}';
   myTemperature.innerHTML = `${data.main.temp}&deg;F`;
   
-  const iconsrc = `//openweathermap.org/img/wn/${data.weather[0].icon}10d@2x.png`;
+  const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
     // try {
     //   const response = await fetch(iconsrc);
     //   if (response.ok) {
