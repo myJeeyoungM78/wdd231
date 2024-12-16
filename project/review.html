@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Jeeyoung Madsen</title>
+    <meta name="author" content="Jeeyoung Madsen" />
+    <meta name="description" content="WDD 131- Dynamic Web Fundamentals - Jeeyoung Madsen - Product Review Form" />
+
+    <link rel="stylesheet" href="styles/review.css">
+    <script src="scripts/review.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Lora:ital,wght@0,400..700;1,400..700&family=Platypi:ital,wght@0,300..800;1,300..800&family=Satisfy&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Product Review Form</h1>
+    </header>
+    <main>
+        <form id="reviewForm" method="get" action="review.html">
+            <fieldset>
+                <legend>Review Form</legend>
+
+                <!-- Product Name -->
+                <div>
+                    <label for="productName">Product Name:</label>
+                    <select id="productName" name="productName" required>
+                        <option value="" disabled selected>Select a Product ...</option>
+                    </select>
+                </div>
+
+                <!-- Overall Rating -->
+                <div>
+
+                    <label>Overall Rating:</label>
+                    <div class="rating-container">
+                        <div class="rating-item">
+                            <input type="radio" id="rating1" name="rating" value="1" required>
+                            <label for="rating1">☆</label>
+                        </div>
+                        <div class="rating-item">
+                            <input type="radio" id="rating2" name="rating" value="2" required>
+                            <label for="rating2">☆☆</label>
+                        </div>
+                        <div class="rating-item">
+                            <input type="radio" id="rating3" name="rating" value="3" required>
+                            <label for="rating3">☆☆☆</label>
+                        </div>
+                        <div class="rating-item">
+                            <input type="radio" id="rating4" name="rating" value="4" required>
+                            <label for="rating4">☆☆☆☆</label>
+                        </div>
+                        <div class="rating-item">
+                            <input type="radio" id="rating5" name="rating" value="5" required>
+                            <label for="rating5">☆☆☆☆☆</label>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+
+                <!-- Date of Installation -->
+                <div>
+                    <label for="installDate">Date of Installation:</label>
+                    <input type="date" id="installDate" name="installDate" required>
+                </div>
+
+                <!-- Useful Features -->
+                <div class="feature-container">
+                    <label>Which features did you find useful in the product? <br><em>(Check all that
+                            apply)</em></label>
+                    <div class="tick-box">
+                        <div>
+                            <input type="checkbox" id="feature1" name="features" value="Feature 1">
+                            <label for="feature1">Durability</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="feature2" name="features" value="Feature 2">
+                            <label for="feature2">Ease of Use</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="feature3" name="features" value="Feature 3">
+                            <label for="feature3">Performace</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="feature4" name="features" value="Feature 4">
+                            <label for="feature3">Design</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Written Review -->
+                <div>
+                    <label for="writtenReview">Written Review:</label>
+                    <textarea id="writtenReview" name="writtenReview"></textarea>
+                </div>
+
+                <!-- User Name -->
+                <div>
+                    <label for="userName">User Name:</label>
+                    <input type="text" id="userName" name="userName">
+                </div>
+
+                <!-- Form Submission Button -->
+                <div>
+                    <input type="submit" value="Submit Review">
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>@
+            <span id="currentyear"></span>
+            | Jeeyoung Madsen | UTAH
+        </p>
+        <p>Last Modified:
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+</body>
+
+</html>

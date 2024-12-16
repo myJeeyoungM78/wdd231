@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: SixCaps
+font link: https://www.fontsquirrel.com/fonts/six-caps
+font author: Vernon Adams
+font author site: https://www.behance.net/vernonadams
+
+
+icon designer: Five by Five
+icon designer link: /FivebyFive
+        
+{"bg":"#9D816E","icon":"#4F5254","font":"#ffffff","slogan":"#ffffff"}
+      

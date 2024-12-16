@@ -1,0 +1,41 @@
+{
+    "DIY": [
+    {
+        "meterial" : "wood",
+        "diy" : "images/th (2).jpg",
+        "link" : "https://www.youtube.com/watch?v=fkvKTAp7KMo"
+    },
+
+    {
+        "meterial" : "metal",
+        "diy" : "images/th (3).jpg",
+        "link" : "https://www.youtube.com/shorts/1QTIvnFGdL8"
+    },
+    
+    {
+        "meterial" : "plastic",
+        "diy" : "images/th (4).jpg",
+        "link" : "https://www.youtube.com/watch?v=-nkTlucMQ8w"
+    },
+
+    {
+        "meterial" : "leather",
+        "diy" : "images/th (5).jpg",
+        "link" : "https://www.youtube.com/watch?v=Ak_CA87-pNk"
+    },
+
+    {
+        "meterial" : "glass",
+        "diy" : "images/th (6).jpg",
+        "link" : "https://www.youtube.com/shorts/80X5cwJnmQA"
+    },
+
+    {
+        "meterial" : "fabric",
+        "diy" : "images/th (7).jpg",
+        "link" : "https://www.youtube.com/watch?v=7imfCXi_HK4"
+    }
+
+
+    ] 
+}
