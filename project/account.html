@@ -8,12 +8,12 @@
     <title>WDD 231 - Web Frontend Development 1 - Jeeyoung Madsen</title>
     <meta name="author" content="Jeeyoung Madsen">
 
-    <link rel="icon" href="images/default-monochrome-white.svg" type="images/svg">
+    <link rel="icon" href="images/default.svg" type="images/svg">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/index.css">
+    <!-- <link rel="stylesheet" href="styles/index.css"> -->
     <link rel="stylesheet" href="styles/account.css">
-    <!-- <link rel="stylesheet" href="styles/thankyoularge.css"> -->
     <script src="scripts/account.js" defer></script>
+    <script src="scripts/index.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,20 +29,22 @@
 </head>
 
 <body>
-        <header>
-            <a id="logo_link" href="index.html">
-                <img class="logo" src="images/default-monochrome-black.svg" alt="MSG">
-            </a>
-            <h1>Your Speical Days</h1>
-            <button id="menu"></button>
-            <nav class="navigation">
-                <a href="index.html">HOME</a>
-                <a href="skillshare.html">SHOP</a>
-                <a href="findsupplies.html">DIY</a>
-                <!-- <a href="site-plan.html">RATES/DATES</a> -->
-                <a href="account.html">SIGN IN</a>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img class="logo" src="images/default.png" alt="logo" width="60" height="90">
+                <h1>MSG <small>My Special Days</small></h1>
+            </div>
+            <nav>
+                <ul id="navigation">
+                    <li><a id="home" href="index.html">Home</a></li>
+                    <li><a id="shop" href="#">SHOP</a></li>
+                    <li><a id="diy" href="diy.html">DIY</a></li>
+                    <li><a id="join" href="account.html">JOIN</a></li>
+                </ul>
             </nav>
-        </header>
+        </div>
+    </header>
 
     <main>
         <!-- <h1>My Account</h1> -->
@@ -74,77 +76,41 @@
                             <input type="submit" value="Submit">
                             </label>
                         </li>
-                        <!-- <form action="review.html" method="home">
+                        <div class="button-box">
+                            <a class="book" href="review.html">Feedback</a>
+                        </div>
+                        <!-- <form action="review.html" method="review">
                             <li class="button">
-                                <button type="Home">Review</button>
+                                <button type="review">Review</button>
                             </li>
                         </form> -->
                     </ul>
                 </form>
             </div>
+            <!-- <div class='button-box'>
+                <a class='book' href="contactus.html">Book Now</a>
+            </div> -->
         </div>
-    </main>
-
-    <!-- Modals -->
-    <div id="np-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('np-modal')">&times;</span>
-            <h2>NP Membership Benefits</h2>
-            <ul>
-                <li>Free membership for non-profit organizations</li>
-                <li>Access to networking events</li>
-                <li>Listing in our online directory</li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="bronze-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('bronze-modal')">&times;</span>
-            <h2>Bronze Membership Benefits</h2>
-            <ul>
-                <li>All NP benefits</li>
-                <li>Quarterly newsletter feature</li>
-                <li>10% discount on event tickets</li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="silver-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('silver-modal')">&times;</span>
-            <h2>Silver Membership Benefits</h2>
-            <ul>
-                <li>All Bronze benefits</li>
-                <li>Monthly spotlight on homepage</li>
-                <li>Access to exclusive training sessions</li>
-                <li>20% discount on event tickets</li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="gold-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('gold-modal')">&times;</span>
-            <h2>Gold Membership Benefits</h2>
-            <ul>
-                <li>All Silver benefits</li>
-                <li>Premium listing in online directory</li>
-                <li>Dedicated account manager</li>
-                <li>30% discount on event tickets</li>
-                <li>Speaking opportunities at major events</li>
-            </ul>
-        </div>
-    </div>
-
     </main>
 
     <footer>
         <div id="contact">
-            <p><strong> OREMUT Chamber of Commerce</strong></p>
+            <p><strong> MSG My Special</strong></p>
             <p>1234N 2223E Orem, UT</p>
             <p><a href="https://info.oremut.org/">info@oremut.org</a></p>
             <p>(801) 123-4567</p>
+        </div>
+
+        <div id="weather-1">
+            <!-- <h3>Current Weather</h3> -->
+            <div class="card">
+                <img id="graphic" src="https://openweathermap.org/img/wn/10d@2x.png" alt="clear sky" class="icon"></img>
+                <img id="graphic" src="" alt="clear sky" class="icon"></img>
+                <h4 id="town"></h4>
+                <!-- <imag id="graphic" src="https://openweathermap.org/img/wn/10d@2x.png" alt="clear sky"></imag> -->
+                <p id="description"></p>
+                <p id="temperature"></p>
+            </div>
         </div>
 
         <div id="social_media">
@@ -162,7 +128,7 @@
         <div id="info">
             <p>WDD231 Class Project</p>
             <p>Jeeyoung Madsen</p>
-            <p><span id="currentyear"></span> OREMUT Chamber of Commerce</p>
+            <p><span id="currentyear"></span>Your Special Days</p>
             <p id="lastModified"></p>
         </div>
     </footer>

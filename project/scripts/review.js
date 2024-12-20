@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     // constants
-const product_select = document.querySelector("#productName");
+const product_select = document.querySelector("#DiyName");
 let numVisits = Number(window.localStorage.getItem("number-vistis")) || 0;
 numVisits++;
 
@@ -54,12 +54,12 @@ function addProductOptions(){
 //     }
 // });
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Set footer copyright year
-    const currentYear = new Date().getFullYear();
-    console.log(currentYear);
-    document.getElementById('currentyear').innerText = currentYear;
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Set footer copyright year
+//     const currentYear = new Date().getFullYear();
+//     console.log(currentYear);
+//     document.getElementById('currentyear').innerText = currentYear;
     
-    // Set footer last modified date
-    document.getElementById('lastModified').innerText = document.lastModified;
-});
+//     // Set footer last modified date
+//     document.getElementById('lastModified').innerText = document.lastModified;
+// });

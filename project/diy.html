@@ -9,10 +9,12 @@
     <meta name="author" content="Jeeyoung Madsen">
 
     <link rel="icon" href="images/default.svg" type="images/svg">
-    <link rel="stylesheet" href="styles/index.css">
+    <!-- <link rel="stylesheet" href="styles/index.css"> -->
     <link rel="stylesheet" href="styles/diy.css">
+    <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/normalize.css">
     <script src="scripts/index.js" defer></script>
+    <script src="scripts/diy.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,36 +31,68 @@
 
 <body>
     <header>
-        <a id="logo_link" href="index.html">
-            <img class="logo" src="images/default-monochrome-black.svg" alt="MSG">
-        </a>
-        <h1>Your Speical Days</h1>
-        <button id="menu"></button>
-        <nav class="navigation">
-            <!-- <ul> -->
-            <a href="index.html">HOME</a>
-            <a href="skillshare.html">SHOP</a>
-            <a href="findsupplies.html">DIY</a>
-            <!-- <a href="site-plan.html">RATES/DATES</a> -->
-            <a href="account.html">JOIN IN</a>
-            <!-- </ul> -->
-        </nav>
+        <div class="container">
+            <div class="logo">
+                <img class="logo" src="images/default.png" alt="logo" width="60" height="90">
+                <h1>MSG <small>My Special Days</small></h1>
+            </div>
+            <nav>
+                <ul id="navigation">
+                    <li><a id="home" href="index.html">Home</a></li>
+                    <li><a id="shop" href="#">SHOP</a></li>
+                    <li><a id="diy" href="diy.html">DIY</a></li>
+                    <li><a id="join" href="account.html">JOIN</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        <h2>Home</h2>
-        <div class="res-grid"></div>
-
+        <h2>DIY LIST</h2>
+        <!-- <div class="res-grid"></div> -->
+        <div id="cards"></div>
     </main>
+
     <footer>
-        <p>@
-            <span id="currentyear"></span>
-            | Jeeyoung Madsen | UTAH
-        </p>
-        <p>Last Modified:
-            <span id="lastModified"></span>
-        </p>
+        <div id="contact">
+            <p><strong>MSG My Special Days</strong></p>
+            <p>1234N 2223E Orem, UT</p>
+            <p><a href="https://info.oremut.org/">info@MSG.org</a></p>
+            <p>(801) 123-4567</p>
+        </div>
+    
+        <div id="weather-1">
+            <!-- <h3>Current Weather</h3> -->
+            <div class="card">
+                <img id="graphic" src="https://openweathermap.org/img/wn/10d@2x.png" alt="clear sky" class="icon"></img>
+                <img id="graphic" src="" alt="clear sky" class="icon"></img>
+                <h4 id="town"></h4>
+                <!-- <imag id="graphic" src="https://openweathermap.org/img/wn/10d@2x.png" alt="clear sky"></imag> -->
+                <p id="description"></p>
+                <p id="temperature"></p>
+            </div>
+        </div>
+    
+        <div id="social_media">
+            <a href="https://youtube.com" target="_blank">
+                <img src="./images/youtube.jpg" width="40" alt="Youtube" loading="lazy">
+            </a>
+            <a href="https://twitter.com" target="blank">
+                <img src="./images/twitter.jpg" width="40" alt="Twitter" loading="lazy">
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <img src="./images/indeed.jpg" width="40" alt="Linkedin" loading="lazy">
+            </a>
+        </div>
+    
+        <div id="info">
+            <p>WDD231 Class Project</p>
+            <p>Jeeyoung Madsen</p>
+            <p><span id="currentyear"></span>Your Special Days</p>
+            <p id="lastModified"></p>
+        </div>
     </footer>
 
 </body>
 
 </html>
+

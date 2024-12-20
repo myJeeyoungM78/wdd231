@@ -10,6 +10,7 @@
     
     <link rel="icon" href="images/default.svg" type="images/svg">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/normalize.css">
     <script src="scripts/index.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,106 +27,93 @@
 </head>
 
 <body>
-    <div id="content">
-        <header>
-            <a id="logo_link" href="index.html">
-                <img class="logo" src="images/default-monochrome-black.svg" alt="MSG">
-            </a>
-            <h1>Your Speical Days</h1>
-            <button id="menu"></button>
-            <nav class="navigation">
-                <!-- <ul> -->
-                <a href="index.html">HOME</a>
-                <a href="skillshare.html">SHOP</a>
-                <a href="findsupplies.html">DIY</a>
-                <!-- <a href="site-plan.html">RATES/DATES</a> -->
-                <a href="account.html">JOIN IN</a>
-                <!-- </ul> -->
-            </nav>
-        </header>
 
-        <div id="hobby">
-            <div id="hobby-box">
-                <img id="hobby-img" src="images/th.jpg" alt="my speical days">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img class="logo" src="images/default.png" alt="logo" width="60" height="90">
+                <h1><strong>MSG</strong> <small>My Special Days</small></h1>
             </div>
-            <section id="hobby-msg">
-                <h4>My Hobby<strong> Speical Gift</strong></h4>
-                <div class="button-box">
-                    <a class="book" href="account.html">Shop Now</a>
-                </div>
-                <!-- <div class="keynotes">
-                    <ul>
-                        <li><strong>Lean Global Network</strong> – Lean Global connection: Trends and Innovations - Thursday
-                            7:00am
-                        </li>
-                        <li><strong>UVU Open House</strong> – UVU Prospective Student Services: Utah Valley University-SC Grand
-                            Ballroom - Thursday 5:00pm
-                        </li>
-                        <li><strong>1 Million Cups - Entrepreneur Networking</strong> – UVU Bsiness Resource Center - wednesday
-                            9:00am
-                        </li>
-                    </ul>
-                </div> -->
-            </section>    
+            <nav>
+                <ul id="navigation">
+                    <li><a id="home" href="index.html">Home</a></li>
+                    <li><a id="shop" href="#">SHOP</a></li>
+                    <li><a id="diy" href="diy.html">DIY</a></li>
+                    <li><a id="join" href="account.html">JOIN</a></li>
+                </ul>
+            </nav>
         </div>
-        <!-- <div class="bg-text">Enjoy Your Hobby</div> -->
+    </header>
 
-        <main class="home-grid">
-            <!-- <div id="background-home"></div> -->
+    <div id="hobby">
+        <div id="hobby-box">
+            <img id="hobby-img" src="images/th.jpg" alt="my speical days">
+        </div>
+        <section id="hobby-msg">
+            <h4>My Hobby<strong> Speical Gift</strong></h4>
+            <div class="button-box">
+                <a class="book" href="#">Shop Now</a>
+            </div>
+        </section>    
+    </div>
 
-            <section class="home">
-                <img class="brown-img" src="images/12.webp" alt="start new hobby">
-                <div class="dropdown">
-                    <button class="dropbtn">Gifts Ideas</button>
-                    <div class="dropdown-content">
-                        <a href="skillshare.html">Shop</a>
-                        <a href="findsupplies.html">DIY</a>
-                        <a href="contactus.html">Reviews</a>
+    <main class="home-grid">
+        <section class="home">
+            <img class="brown-img" src="images/12.webp" alt="start new hobby">
+            <div class="dropdown">
+                <button class="dropbtn">About Us</button>
+                <div class="dropdown-content">
+                    <a href="#">Shop</a>
+                    <a href="diy.html">DIY</a>
+                    <a href="account.html">Join</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-text">
+            <h2>Shop Christmas event</h2>
+            <p>Let your holidays glow with decorations that reflect your personality. Get inspiration for more Christmas decoration
+            ideas by searching our seasonal DIY pages!</p>
+        </section>
+
+        <div id="information"></div>
+        <section class="sharing-card">
+            <div class="container">
+                <img class="card-img" src="images/th (8).jpg" alt="gift">
+                <div class='middle'>
+                    <div class='text'>
+                        <a href="#">Gift Shop</a>
                     </div>
                 </div>
-            </section>
-            <section class="home-text">
-                <h2>Shop Christmas event</h2>
-                <p>Let your holidays glow with decorations that reflect your personality. Get inspiration for more Christmas decoration
-                ideas by searching our seasonal DIY pages!</p>
-            </section>
+            </div>
+        </section>
 
-            <div id="information"></div>
-            <section class="sharing-card">
-                <div class="container">
-                    <img class="card-img" src="images/th (8).jpg" alt="gift">
-                    <div class='middle'>
-                        <div class='text'>
-                            <a href="skillshare.html">Class</a>
-                        </div>
+        <section class="supplies-card">
+            <div class="container">
+                <img class="card-img" src="images/th (12).jpg" alt="home Decoration">
+                <div class='middle'>
+                    <div class='text'>
+                        <a href="#">Deco Shop</a>
                     </div>
                 </div>
-            </section>
-            <section class="supplies-card">
-                <div class="container">
-                    <img class="card-img" src="images/th (12).jpg" alt="home Decoration">
-                    <div class='middle'>
-                        <div class='text'>
-                            <a href="findsupplies.html">Link</a>
-                        </div>
+            </div>
+        </section>
+        
+        <section class="contact-card">
+            <div class="container">
+                <img class="card-img" src="images/th (13).jpg" alt="pet project">
+                <div class='middle'>
+                    <div class='text'>
+                        <a href="#">Pet Shop</a>
                     </div>
                 </div>
-            </section>
-            <section class="contact-card">
-                <div class="container">
-                    <img class="card-img" src="images/th (13).jpg" alt="pet project">
-                    <div class='middle'>
-                        <div class='text'>
-                            <a href="contactus.html">Help</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
+            </div>
+        </section>
+    </main>
 
-        <footer>
+    <footer>
         <div id="contact">
-            <p><strong>MSG My Specail Days</strong></p>
+            <p><strong>MSG My Special Days</strong></p>
             <p>1234N 2223E Orem, UT</p>
             <p><a href="https://info.oremut.org/">info@MSG.org</a></p>
             <p>(801) 123-4567</p>
@@ -142,7 +130,7 @@
                 <p id="temperature"></p>
             </div>
         </div>
-        
+    
         <div id="social_media">
             <a href="https://youtube.com" target="_blank">
                 <img src="./images/youtube.jpg" width="40" alt="Youtube" loading="lazy">
@@ -154,16 +142,15 @@
                 <img src="./images/indeed.jpg" width="40" alt="Linkedin" loading="lazy">
             </a>
         </div>
-        
+    
         <div id="info">
             <p>WDD231 Class Project</p>
             <p>Jeeyoung Madsen</p>
-            <!-- <p><span id="currentyear"></span> MSG Your speical days</p> -->
-            <!-- <p><span id="currentyear"></span> MSG Your speical days</p> -->
+            <p><span id="currentYear"></span>Your speical days</p>
             <p id="lastModified"></p>
         </div>
-        </footer>
-    </div>
+    </footer>
+<!-- </div> -->
 </body>
 
 </html>

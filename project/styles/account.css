@@ -98,7 +98,6 @@ input[type="email"],
 input[type="phone"],
 textarea {
     padding: 10px;
-    /* border: 1px solid var(--paragraph-color); */
     border-radius: 10px;
     font-size: 16px;
     transition: 0.3s;
@@ -109,9 +108,14 @@ input[type="email"]:focus,
 input[type="phone"]:focus,
 textarea:focus {
     outline: none;
-    border-color: var(--paragraph-color);
-    box-shadow: 0 0 0 2px var(--nav-background-color);
+    border-color: #22333b;
+    /* box-shadow: 0 0 0 2px #60a6f0; */
 }
+
+/* input[type="home"]:hover,
+input[type="submit"]:hover {
+    background-color: var(--nav-hover-link-color);
+} */
 
 fieldset {
     margin-bottom: 20px;

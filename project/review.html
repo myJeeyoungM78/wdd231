@@ -3,12 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Dynamic Web Fundamentals - Jeeyoung Madsen</title>
-    <meta name="author" content="Jeeyoung Madsen" />
-    <meta name="description" content="WDD 131- Dynamic Web Fundamentals - Jeeyoung Madsen - Product Review Form" />
+    <title>WDD 231 - Web Frontend Development 1 - Jeeyoung Madsen</title>
+    <meta name="author" content="Jeeyoung Madsen">
 
+    <link rel="icon" href="images/default.svg" type="images/svg">
     <link rel="stylesheet" href="styles/review.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <script src="scripts/index.js" defer></script>
     <script src="scripts/review.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,12 +19,34 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Lora:ital,wght@0,400..700;1,400..700&family=Platypi:ital,wght@0,300..800;1,300..800&family=Satisfy&display=swap"
         rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Vollkorn:ital,wght@0,400..900;1,400..900&family=WindSong:wght@400;500&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <h1>Product Review Form</h1>
+        <div class="container">
+            <div class="logo">
+                <img class="logo" src="images/default.png" alt="logo" width="60" height="90">
+                <h1>MSG <small>My Special Days</small></h1>
+            </div>
+            <nav>
+                <ul id="navigation">
+                    <li><a id="home" href="index.html">Home</a></li>
+                    <li><a id="shop" href="#">SHOP</a></li>
+                    <li><a id="diy" href="diy.html">DIY</a></li>
+                    <li><a id="join" href="account.html">JOIN</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+    <!-- <header>
+        <h1>Product Review Form</h1>
+    </header> -->
     <main>
         <form id="reviewForm" method="get" action="review.html">
             <fieldset>
@@ -29,8 +54,8 @@
 
                 <!-- Product Name -->
                 <div>
-                    <label for="productName">Product Name:</label>
-                    <select id="productName" name="productName" required>
+                    <label for="DiyName">DIY Idea Name:</label>
+                    <select id="DiyName" name="DIYIdeaName" required>
                         <option value="" disabled selected>Select a Product ...</option>
                     </select>
                 </div>
@@ -114,13 +139,44 @@
         </form>
     </main>
     <footer>
-        <p>@
-            <span id="currentyear"></span>
-            | Jeeyoung Madsen | UTAH
-        </p>
-        <p>Last Modified:
-            <span id="lastModified"></span>
-        </p>
+        <div id="contact">
+            <p><strong>MSG My Specail Days</strong></p>
+            <p>1234N 2223E Orem, UT</p>
+            <p><a href="https://info.oremut.org/">info@MSG.org</a></p>
+            <p>(801) 123-4567</p>
+        </div>
+    
+        <div id="weather-1">
+            <!-- <h3>Current Weather</h3> -->
+            <div class="card">
+                <img id="graphic" src="https://openweathermap.org/img/wn/10d@2x.png" alt="clear sky" class="icon"></img>
+                <img id="graphic" src="" alt="clear sky" class="icon"></img>
+                <h4 id="town"></h4>
+                <!-- <imag id="graphic" src="https://openweathermap.org/img/wn/10d@2x.png" alt="clear sky"></imag> -->
+                <p id="description"></p>
+                <p id="temperature"></p>
+            </div>
+        </div>
+    
+        <div id="social_media">
+            <a href="https://youtube.com" target="_blank">
+                <img src="./images/youtube.jpg" width="40" alt="Youtube" loading="lazy">
+            </a>
+            <a href="https://twitter.com" target="blank">
+                <img src="./images/twitter.jpg" width="40" alt="Twitter" loading="lazy">
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <img src="./images/indeed.jpg" width="40" alt="Linkedin" loading="lazy">
+            </a>
+        </div>
+    
+        <div id="info">
+            <p>WDD231 Class Project</p>
+            <p>Jeeyoung Madsen</p>
+            <!-- <p><span id="currentyear"></span> MSG Your speical days</p> -->
+            <!-- <p><span id="currentyear"></span> MSG Your speical days</p> -->
+            <p id="lastModified"></p>
+        </div>
     </footer>
 </body>
 

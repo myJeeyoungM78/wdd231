@@ -1,112 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Satisfy&display=swap');
+/* Mobile view */
 
-body {
-    font-size: 25px;
-    font-family: 'josefin sans', 'satisfy', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --paragraph-color: #22211f;
+    --body-font: 'josefin';
+
+    --nav-background-color: #22333b;
+    --nav-hover-link-color: #32021F;
+    --main-background-color: #fff;
+    --main-background-color2: #F4EBBE;
+    --nav-hover-background-color: #F4EBBE;
 }
 
-#content {
-    /* background-color: #22333b; */
-    z-index: -1;
-    max-width: 1600px;
-    margin: 0 auto;
+/* body {
+    font-family: var(--body-font);
+    margin: 0;
+    line-height: 1.6;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--main-background-color);
 }
 
 header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--nav-background-color);
     display: grid;
-    grid-template-columns: 3fr 600px auto;
-    transition: transform .5s;
+    grid-template-columns: 150px auto;
 }
 
-.logo {
-    width: 50px;
+header div {
+    display: flex;
+    align-items: center;
 }
 
-#logo_link {
-    /* padding-top: 5px; */
-    justify-self: center;
-    align-self: center;
+header img {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px rgba(235, 222, 222, 0.253);
 }
 
-h1 {
-    font-size: 1em;
-    line-height: 1;
-    font-family: windsong;
-    color: #d47023;
-    /* text-align: left; */
-    /* display: block; */
+header div h1 {
+    color: white;
+    padding-left: px;
+    font-size: 2.5em;
 }
 
-/* h1 small {
-    font-size: x-small;
-
-} */
-
-
-nav {
-    min-width: 500px;
-    margin: 1rem auto;
+h1 small {
+    font-size: 0.4em;
+    display: block;
 }
 
-/* hide hamburger button */
-#menu {
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
+nav:hover {
+    cursor: pointer;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 5px;
+    font-size: 20px;
     display: none;
 }
 
-.navigation {
-    font-family: 'josefin sans';
-    font-size: .5em;
-    display: flex;
-    /* flex-direction: column; */
-    /* list-style: none; */
-    /* justify-content: space-around; */
-    justify-content: right;
-    /* background-color: #22333b; */
-    background-color: #22333b;
-    color: #fff;
-    text-align: center;
-}
-
-.navigation a {
-    /* display: flex; */
-    padding: 1rem;
-    text-align: center;
+nav a {
     text-decoration: none;
-    color: #fff;
-}
-
-.navigation a:hover {
-    background-color: #c6ac8f;
     color: white;
-    font-weight: 700;
 }
 
-/* #menu {
-    font-size: 1.5rem;
-    border: 0;
-    background: none;
-    color: #000;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-}
-
-#menu::before {
+nav::before {
     content: "☰";
-    color: #d9d9d9;
+    font-size: 40px;
+    padding: 30px;
+    color: white;
 }
 
-#menu.open::before {
+nav.show::before {
     content: "❎";
-} */
+    color: var(--nav-link-color);
+    padding-left: 50px;
+    font-size: 30px;
+}
 
-/* when the button is clicked - the open class is toggled (added/removed) */
-/* .open a {
+nav ul li:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+    border-radius: 5px;
+    background-color: var(--nav-hover-background-color);
+    color: var(--nav-hover-link-color);
+}
+
+nav a:hover {
+    color: var(--nav-hover-link-color);
+}
+
+.show li {
     display: block;
+    color: white;
 } */
 
 #hobby {
@@ -124,28 +126,6 @@ nav {
     height: 100%;
 }
 
-/* Position text in the middle of the page/image */
-.bg-text {
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/opacity/see-through */
-    color: white;
-    font-weight: bold;
-    font-size: 50px;
-    border: 10px solid #f1f1f1;
-    position: fixed;
-    /* Stay fixed */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 500px;
-    padding: 20px;
-    text-align: center;
-    font-family: 'josefin sans';
-}
-
 #hobby-msg {
     grid-column: 2/3;
     grid-row: 1/2;
@@ -158,15 +138,14 @@ nav {
 
 .home-title {
     color: #c6ac8f;
-    font-family: 'satisfy';
-    font-size: 2em;
+    font-size: 4em;
     text-shadow: 1px 1px #5e503f;
 }
 
 #hobby-msg h4 {
     color: #5e503f;
     text-align: center;
-    font-family: 'josefin sans';
+    font-size: 6rem;
 }
 
 .book {
@@ -393,38 +372,6 @@ main section img {
     box-shadow: 10px 10px 20px #c6ac8f;
 }
 
-footer {
-    background-color: #5e503f;
-    padding: 25px 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-footer a {
-    color: #fefae0;
-    text-decoration: none;
-
-}
-
-footer a:hover {
-    background-color: #fefae0;
-    color: #bc6c25;
-}
-
-footer p {
-    font-size: 1em;
-    color: white;
-}
-
-footer p a:hover {
-    text-decoration: underline;
-}
-
-footer .social img {
-    padding-top: 15px;
-}
-
 
 @media screen and (max-width: 900px) {
 
@@ -470,7 +417,7 @@ footer .social img {
         padding: 15px;
     }
 
-    /* hide hamburger button */
+    hide hamburger button
     #menu {
         display: flex;
     }
@@ -544,299 +491,6 @@ footer .social img {
 
 
 
-
-/* skillshare.html */
-
-#skill {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-}
-
-#skill-box {
-    grid-column: 1/4;
-    grid-row: 1/3;
-}
-
-#skill-img {
-    width: 100%;
-}
-
-#skill-msg {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    margin-top: 100px;
-}
-
-#skill-msg h1 {
-    text-align: center;
-}
-
-.home-title {
-    color: #c6ac8f;
-    font-family: 'satisfy';
-    font-size: 2em;
-}
-
-#skill-msg h4 {
-    color: #5e503f;
-    text-align: center;
-    font-family: 'josefin sans';
-}
-
-#background-sharing {
-    background-color: #5e503f;
-    grid-column: 1/11;
-    grid-row: 1/3;
-    margin-top: 10px;
-}
-
-.sharing-text {
-    grid-column: 1/11;
-    grid-row: 1/2;
-}
-
-.sharing-text h2 {
-    margin-top: 20;
-    color: white;
-    text-align: center;
-    font-family: 'josefin sans';
-}
-
-.sharing-text p {
-    color: white;
-    padding: 50px;
-    line-height: 1.5em;
-    text-align: center;
-    font-family: 'josefin sans';
-}
-
-.sharing {
-    grid-column: 4/8;
-    grid-row: 2/3;
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-
-.thumbnail-img {
-    border: 10px solid #c6ac8f;
-    transition: transform .5s;
-    box-shadow: 5px 5px 10px #5e503f;
-    text-align: center;
-}
-
-.thumbnail-img:hover {
-    opacity: .6;
-    transform: scale(1.1);
-}
-
-.infor-img {
-    border: 10px solid #d9c2a3;
-    transition: transform .5s;
-    box-shadow: 5px 5px 10px #6f7364;
-    border-radius: 100%;
-    width: 100%;
-    height: 450px;
-    box-shadow: 5px 5px 10px #6f7364;
-}
-
-.white-card,
-.person-card {
-    margin: 100px 0;
-}
-
-.white-card {
-    grid-column: 2/5;
-    grid-row: 4/6;
-}
-
-.person-card {
-    grid-column: 7/10;
-    grid-row: 4/6;
-}
-
-.white-card p,
-.person-card p {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 15px 30px;
-    margin-top: 50px;
-    line-height: 1.5em;
-    border-radius: 25px;
-    text-indent: 30px;
-}
-
-.infor-img:hover {
-    opacity: .6;
-    transform: scale(1.1);
-}
-
-.white-card h3,
-.person-card h3 {
-    text-align: center;
-}
-
-@media screen and (max-width: 900px) {
-
-    #skill,
-    .home-grid {
-        display: block;
-        height: auto;
-    }
-
-    #skill {
-        margin-top: 0;
-    }
-
-    #skill-msg {
-        margin-top: 0;
-    }
-
-    #skill-msg h1 h4 {
-        display: none;
-    }
-
-    .sharing .thumbnail-img {
-        margin: 50px auto;
-        width: 60%;
-    }
-
-    #background-sharing {
-        display: none;
-    }
-
-    .sharing {
-        font-size: 25px;
-        color: #6f7364;
-    }
-
-    #sharing-background,
-    .sharing {
-        width: 80%;
-        display: block;
-        margin: 0 auto;
-    }
-
-}
-
-
-/* findsupplies.html */
-
-#find {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-}
-
-#find-box {
-    grid-column: 1/4;
-    grid-row: 1/3;
-}
-
-#find-img {
-    width: 100%;
-}
-
-#find-msg {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    margin-top: 100px;
-}
-
-#find-msg h1 {
-    text-align: center;
-}
-
-.home-title {
-    color: #c6ac8f;
-    font-family: 'satisfy';
-    font-size: 2em;
-}
-
-#find-msg h4 {
-    color: #5e503f;
-    text-align: center;
-    font-family: 'josefin sans';
-}
-
-#background-finding {
-    background-color: #5e503f;
-    grid-column: 1/11;
-    grid-row: 1/3;
-    margin-top: 10px;
-}
-
-.finding-text {
-    grid-column: 1/11;
-    grid-row: 1/2;
-}
-
-.finding-text h2 {
-    margin-top: 20;
-    color: white;
-    text-align: center;
-    font-family: 'josefin sans';
-}
-
-.finding-text p {
-    color: white;
-    padding: 50px;
-    line-height: 1.5em;
-    text-align: center;
-    font-family: 'josefin sans';
-}
-
-.finding {
-    grid-column: 4/8;
-    grid-row: 2/3;
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-
-.yarns-img {
-    border: 10px solid #c6ac8f;
-    transition: transform .5s;
-    box-shadow: 5px 5px 10px #5e503f;
-    text-align: center;
-}
-
-.yarns-img:hover {
-    opacity: .6;
-    transform: scale(1.1);
-}
-
-.finding-card,
-.making-card {
-    margin: 100px 0;
-    margin-top: -10px;
-}
-
-.finding-card {
-    grid-column: 2/5;
-    grid-row: 4/6;
-}
-
-.making-card {
-    grid-column: 7/10;
-    grid-row: 4/6;
-}
-
-.finding-card p,
-.making-card p {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 15px 30px;
-    margin-top: 50px;
-    line-height: 1.5em;
-    border-radius: 25px;
-    text-indent: 30px;
-}
-
-.supplies-card h3,
-.making-card h3 {
-    text-align: center;
-}
-
 @media screen and (max-width: 900px) {
 
     #find,
@@ -887,16 +541,6 @@ footer .social img {
     }
 }
 
-form {
-    /* Center the form on the page */
-    margin: 0 auto;
-    width: 400px;
-    /* Form outline */
-    padding: 1em;
-    border: 1px solid #ccc;
-    border-radius: 1em;
-}
-
 ul {
     list-style: none;
     padding: 0;
@@ -941,32 +585,4 @@ textarea {
 
     /* Provide space to type some text */
     height: 5em;
-}
-
-.button {
-    /* Align buttons with the text fields */
-    padding-left: 90px;
-    /* same size as the label elements */
-}
-
-button {
-    /* This extra margin represent roughly the same space as the space
-       between the labels and their text fields */
-    margin-left: 0.5em;
-}
-
-
-#feedback {
-    background-color: antiquewhite;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: .5em;
-    /* make this element invisible until we are ready for it */
-    display: none;
-}
-
-.moveDown {
-    margin-top: 3em;
 }
